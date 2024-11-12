@@ -247,8 +247,33 @@ a:hover {
             <li> · (3): Formulas from Discussion #22. </li>
             <li> · (4): Statement from Discussion #22, reviewed in Discussion #27 (also reviewed the requirement u=cv for equality).</li>
             <li> · (5): Covered in Discussion #28.</li>
+            <h3>Singular Value Decomposition</h3>
             <li><a href="Math54-November 8, 2024.pdf" target="_blank">Discussion#29 - November 8, 2024</a></li>
+            <li>Take your time to thoroughly understand SVD decomposition and its applications. You should be able to derive some of the proofs yourself.</li>
+            <li>Geometric Interpretation of SVD:</li>
+            <p></p>Singular Value Decomposition (SVD) has a very intuitive geometric interpretation. It helps us understand how a linear transformation stretches, rotates, or compresses vectors in space. Suppose we have a matrix <strong>A ∈ ℝ<sup>m×n</sup></strong> with the SVD:/li></p>
+    
+    <p><strong>A = U Σ V<sup>T</sup></strong></p>
 
+    <h2>1. Rotation or Reflection of Right Singular Vectors (V<sup>T</sup>):</h2>
+    <p><strong>V ∈ ℝ<sup>n×n</sup></strong> is an orthogonal matrix whose columns form the right singular vectors of matrix A. The matrix <strong>V<sup>T</sup></strong> rotates or reflects the basis vectors in the input space to align with a new orthogonal coordinate system.</p>
+
+    <h2>2. Scaling Transformation (Σ):</h2>
+    <p><strong>Σ ∈ ℝ<sup>m×n</sup></strong> is a diagonal matrix containing the singular values of A along its diagonal. These singular values represent the scaling factors along each orthogonal direction. In the transformed coordinate system, vectors are stretched or compressed, with the scaling factor determined by the magnitude of each singular value. If a singular value is zero, the corresponding direction is compressed to zero, resulting in a dimensional reduction.</p>
+
+    <h2>3. Rotation or Projection of Left Singular Vectors (U):</h2>
+    <p><strong>U ∈ ℝ<sup>m×m</sup></strong> is another orthogonal matrix whose columns are the left singular vectors of A. This matrix applies a second rotation or projection of the scaled vectors to the target space.</p>
+
+    <p>In summary, SVD can be viewed as a decomposition that interprets the action of any matrix A as:</p>
+    <ul>
+        <li>A coordinate transformation (rotation/reflection) in the input space,</li>
+        <li>Scaling along each direction,</li>
+        <li>A second coordinate transformation in the output space.</li>
+    </ul>
+            <p>If you are a CS/DS/EE/Stats major: This geometric understanding is especially useful in data analysis and machine learning. For example, in Principal Component Analysis (PCA), SVD reveals the main directions of variance in high-dimensional data, enabling dimensionality reduction.</p>
+            <p>If you are a math major: You should anticipate that simply knowing how to apply concepts and solve problems is not enough. :)</p>
+
+            
             <h2>Week #12</h2>
             <li>Veterans Day - November 11, 2024</li>
             <li><a href="Math54-November 13, 2024.pdf" target="_blank">Discussion#30 - November 13, 2024</a></li>

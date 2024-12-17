@@ -6,25 +6,98 @@
     <title>Jiangyue Zheng's Homepage</title>
     <style>
         :root {
-            --primary-color: #60a5fa;
-            --secondary-color: #93c5fd;
-            --accent-color: #fcd34d;
-            --background-color: #f0f9ff;
-            --text-color: #1e293b;
-            --link-color: #3b82f6;
-            --section-spacing: 2rem;
-            --highlight-color: #fde68a;
-            --card-border: #bfdbfe;
+            --primary-color: #2c5282;
+            --secondary-color: #2b6cb0;
+            --accent-color: #f6ad55;
+            --background-color: #f7fafc;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
             font-size: 12px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .content-wrapper {
+            padding: 1rem 2rem;
+        }
+
+        section {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin: 1rem 0 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 0.9rem;
+            margin: 0.75rem 0 0.25rem;
+            font-weight: normal;
+        }
+
+        p, li {
+            margin: 0.25rem 0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .experience-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .experience-item:hover {
+            border-left-color: var(--accent-color);
+        }
+
+        .italic-text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.8rem;
         }
 
         header {
@@ -35,215 +108,124 @@
                 #dbeafe 70%,
                 #fde68a 100%
             );
-            background-size: 200% 200%;
-            animation: gradientMove 15s ease infinite;
-            color: white;
             padding: 2rem 0;
             text-align: center;
-            margin-bottom: 2rem;
+            color: white;
         }
 
-        .container {
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .content-wrapper {
-            background: white;
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-        }
-
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .experience-item {
-            background: white;
-            padding: 1.25rem;
-            border-radius: 8px;
-            margin-bottom: 0.75rem;
-            border: 1px solid var(--card-border);
-            border-left: 4px solid var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            transform: translateX(5px);
-            border-left-color: var(--accent-color);
-        }
-
-        .section-title {
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
-
-        h1 {
+        .header-content h1 {
             font-size: 1.75rem;
-            font-weight: 700;
             margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 1rem 0 0.75rem;
-        }
-
-        h3 {
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin: 0.5rem 0;
-        }
-
-        p {
-            margin: 0.5rem 0;
-            color: #4a5568;
-        }
-
-        .italic-text {
-            font-style: italic;
-            color: #666;
-            font-size: 0.8rem;
-            margin: 0.25rem 0;
-        }
-
-        ul {
-            list-style-type: none;
             padding: 0;
-            margin: 0;
         }
 
-        .experience-item a {
-            display: inline-block;
+        .header-content p {
             margin-top: 0.5rem;
-            text-decoration: none;
-            color: var(--link-color);
-        }
-
-        .experience-item a:hover {
-            color: var(--accent-color);
-        }
-
-        .contact {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @media (max-width: 1024px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
-                padding: 1.5rem;
-            }
-
-            .full-width {
-                grid-column: 1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.25rem;
-            }
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="header-content">
             <h1>Jiangyue Zheng</h1>
-            <p style="opacity: 0.9; margin-top: 0.5rem;">Pure Mathematics Student at UC Berkeley</p>
+            <p>Pure Mathematics Student at UC Berkeley</p>
         </div>
     </header>
 
     <div class="container">
         <div class="content-wrapper">
-            <section class="full-width">
+            <section>
                 <h2>About Me</h2>
                 <p>I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.</p>
             </section>
 
             <section>
-                <h2 class="section-title">Academic Experience</h2>
-                <h3>Reading Courses & Research</h3>
-                <ul>
-                    <li class="experience-item">
-                        <h3>Research on Coupled Derivative Nonlinear Schrödinger Equation</h3>
-                        <p class="italic-text">Advisor: Sung-Jin Oh, UC Berkeley | 2024 - Present</p>
-                        <p>Investigating multi-soliton solutions of the CDNLS using the Riemann-Hilbert method. Developed expertise in integrable systems and matrix-analytic techniques.</p>
-                        <p class="italic-text">Status: Preprint in preparation</p>
-                        <a href="cdnls_equation_notes.pdf" target="_blank">Research Notes →</a>
-                    </li>
+                <h2>Academic Experience</h2>
+                <div class="experience-item">
+                    <h3>Research on Coupled Derivative Nonlinear Schrödinger Equation</h3>
+                    <p class="italic-text">Advisor: Sung-Jin Oh, UC Berkeley | 2024 - Present</p>
+                    <p>Investigating multi-soliton solutions of the Coupled Derivative Nonlinear Schrödinger Equation (CDNLS) using the Riemann-Hilbert method. Developed foundational expertise in integrable systems, such as the KdV equation, and applied matrix-analytic techniques to reflectionless cases.</p>
+                    <p class="italic-text">Status: Preprint in preparation</p>
+                    <a href="cdnls_equation_notes.pdf">Preprint →</a>
+                </div>
 
-                    <li class="experience-item">
-                        <h3>Reading Course on Lie Groups and Lie Algebras</h3>
-                        <p class="italic-text">Advisor: Tony Feng, UC Berkeley | 2024 - Present</p>
-                        <p>Exploring representation theory and classification of semisimple Lie algebras. Working on honors thesis on Weyl character formula.</p>
-                        <a href="lie_groups_notes.pdf" target="_blank">Reading Notes →</a>
-                    </li>
+                <div class="experience-item">
+                    <h3>Reading Course on Lie Groups and Lie Algebras & Representation Theory</h3>
+                    <p class="italic-text">Advisor: Tony Feng, UC Berkeley | 2024 - Present</p>
+                    <p>Engaged in exploration of Lie groups and Lie algebras with a focus on representation theory, classification of semisimple Lie algebras, and their applications in automorphic forms. Currently working on an honors thesis on the Weyl character formula and the Borel-Weil-Bott Theorem.</p>
+                    <a href="lie_groups_notes.pdf">Reading Notes →</a>
+                </div>
 
-                    <li class="experience-item">
-                        <h3>Reading Course on Algebraic Number Theory</h3>
-                        <p class="italic-text">Advised by Emiliano Gomez, UC Berkeley | 2024 - Present</p>
-                        <a href="algebraic_number_theory_notes.pdf" target="_blank">Reading Notes →</a>
-                    </li>
-                </ul>
+                <div class="experience-item">
+                    <h3>Reading Course on Algebraic Number Theory</h3>
+                    <p class="italic-text">Advisor: Emiliano Gómez, UC Berkeley | 2024 - Present</p>
+                    <p>Explored algebraic number theory with applications to Fermat's Last Theorem. Combined algebraic approaches with geometric perspectives to deepen understanding of number-theoretic structures.</p>
+                    <a href="algebraic_number_theory_notes.pdf">Reading Notes →</a>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Reading Course on Measure Theory & Hilbert Spaces</h3>
+                    <p class="italic-text">Advisor: Mengxuan Yang, UC Berkeley | 2024 - Present</p>
+                    <p>Studied measure theory, Lp spaces, and the Riesz Representation Theorem, integrating these tools into analysis and PDE contexts. Developed insights into self-adjoint operators and their spectra.</p>
+                    <a href="real_analysis_notes.pdf">Reading Notes →</a>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Directed Reading Program (DRP) on Algebraic Geometry</h3>
+                    <p class="italic-text">Mentor: John Nolan, UC Berkeley | Spring 2024</p>
+                    <p>Engaged in a comprehensive study of The Rising Sea and Algebraic Curves. Produced a detailed reading report on Bézout's Theorem, highlighting its implications in algebraic geometry and polynomial systems.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Reading Course on Representation Theory & Characteristic Classes</h3>
+                    <p class="italic-text">Advisor: Rui Wang, UC Berkeley | 2023 - Present</p>
+                    <p>Explored representation theory through Etingof's Introduction to Representation Theory. Extended research to characteristic classes, including the study of Stiefel-Whitney classes and their connections to obstruction theory and symplectic geometry.</p>
+                    <a href="representation_theory_notes.pdf">Reading Notes →</a>
+                </div>
             </section>
 
             <section>
-                <h2 class="section-title">Teaching & Other Experience</h2>
-                <ul>
-                    <li class="experience-item">
-                        <h3>Undergraduate Student Instructor (uGSI)</h3>
-                        <p>Math54: Linear Algebra and Differential Equations, Fall 2024</p>
-                        <a href="math54.html" target="_blank">Course Materials →</a>
-                    </li>
-                    
-                    <li class="experience-item">
-                        <h3>Reader</h3>
-                        <p>Math110 & Math113, Summer 2024</p>
-                        <p>Math113, Spring 2024</p>
-                    </li>
-                    
-                    <li class="experience-item">
-                        <h3>Research Assistant, Mangul Lab</h3>
-                        <p>USC, 2022 - 2023</p>
-                        <p class="italic-text">Computational methods for genomics data translation</p>
-                    </li>
-                    
-                    <li class="experience-item">
-                        <h3>Research Assistant, Multisensory Processing Lab</h3>
-                        <p>UCLA, 2022</p>
-                        <p class="italic-text">Computational perception and neural causal inference</p>
-                    </li>
-                </ul>
+                <h2>Teaching Experience</h2>
+                <div class="experience-item">
+                    <h3>Undergraduate Student Instructor (uGSI)</h3>
+                    <p>Math54: Linear Algebra and Differential Equations, Fall 2024</p>
+                    <p>Designed and led weekly discussion sections, held office hours, and provided targeted support to improve student understanding in linear algebra and differential equations.</p>
+                    <a href="math54.html">Course Materials →</a>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Upper Division Math Tutor</h3>
+                    <p>SLC Student Learning Center, Jan 2024 - Jun 2024</p>
+                    <p>Conducted tutoring sessions for advanced math courses including Math 104, Math 110, Math 113, and Math 185, ensuring conceptual clarity and problem-solving proficiency for students.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Reader</h3>
+                    <p>Math 110 & Math 113, Spring 2024, Summer 2024, Spring 2025</p>
+                    <p>Graded homework and exams for Linear Algebra (Math 110) and Abstract Algebra (Math 113) courses, ensuring accurate assessment of student work and providing constructive feedback.</p>
+                </div>
             </section>
 
-            <section class="full-width contact">
-                <h2 class="section-title">Contact</h2>
+            <section>
+                <h2>Other Research Experience</h2>
+                <div class="experience-item">
+                    <h3>Research Assistant, Mangul Lab</h3>
+                    <p>USC, Jul 2022 - Jan 2023</p>
+                    <p>Computational methods to enhance genomics data translation into research. Worked on extracting meaningful insights from raw RNA-seq data amidst technological limitations, and applied bioinformatics tools to identify differentially expressed genes in case controls.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Research Assistant, Multisensory Processing Lab</h3>
+                    <p>UCLA, May 2022 - Aug 2022</p>
+                    <p>Examined computational perception with a focus on neural causal inference. Investigated the Bayesian causal inference model's relevance to behavioral tasks, and drafted a Bayesian causal inference proposal.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
                 <p>Email: jiangyuezheng[at]berkeley[dot]edu</p>
+                <p>Homepage: jiangyue-zheng.github.io</p>
             </section>
         </div>
     </div>

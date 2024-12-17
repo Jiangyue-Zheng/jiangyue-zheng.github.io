@@ -44,20 +44,86 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
         }
 
         .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 2rem;
             margin-bottom: 2rem;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--accent-color);
+        }
+
+        .about-section {
+            padding: 1.5rem;
+            background: linear-gradient(to right, rgba(96, 165, 250, 0.1), transparent);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .experience-description {
+            margin-top: 0.5rem;
+        }
+
+        header {
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 1rem 0 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+        }
+
+        .section-title {
+            margin-top: 1.5rem;
+        }
+
+        .about-section {
+            padding: 1rem;
+            background: linear-gradient(to right, rgba(96, 165, 250, 0.1), transparent);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
 
         .left-column {

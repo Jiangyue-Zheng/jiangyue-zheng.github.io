@@ -28,7 +28,15 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, 
+                #60a5fa 0%,
+                #93c5fd 30%,
+                #bfdbfe 50%,
+                #dbeafe 70%,
+                #fde68a 100%
+            );
+            background-size: 200% 200%;
+            animation: gradientMove 15s ease infinite;
             color: white;
             padding: 3rem 0;
             text-align: center;
@@ -170,6 +178,18 @@
             background-color: var(--accent-color);
         }
 
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 0 1rem;
@@ -198,7 +218,7 @@
             <section>
                 <h2>About Me</h2>
                 <p>
-                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory, with a particular focus on their applications in mathematical physics and integrable systems. I'm passionate about exploring the deep connections between abstract mathematical structures and their concrete manifestations in physical systems.
+                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.
                 </p>
             </section>
 
@@ -271,6 +291,26 @@
                         <h3>Research Assistant, Mangul Lab</h3>
                         <p>USC, 2022 - 2023</p>
                         <p class="italic-text">Focused on computational methods to enhance genomics data translation into research.</p>
+                    </li>
+                    
+                    <li class="experience-item">
+                        <h3>Research Assistant, Multisensory Processing Lab</h3>
+                        <p>UCLA, 2022</p>
+                        <p class="italic-text">Examined computational perception with a focus on neural causal inference.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="contact">
+                <h2 class="section-title">Contact</h2>
+                <p>
+                    Email: jiangyuezheng[at]berkeley[dot]edu
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>                 <p class="italic-text">Focused on computational methods to enhance genomics data translation into research.</p>
                     </li>
                     
                     <li class="experience-item">

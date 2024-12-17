@@ -50,11 +50,33 @@
         }
 
         .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 2rem;
             margin-bottom: 2rem;
+        }
+
+        .left-column {
+            grid-column: 1;
+        }
+
+        .right-column {
+            grid-column: 2;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .left-column, .right-column {
+                grid-column: 1;
+            }
         }
 
         h1 {
@@ -218,8 +240,7 @@
             <section>
                 <h2>About Me</h2>
                 <p>
-                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.
-                </p>
+                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.</p>
             </section>
 
             <section>
@@ -291,26 +312,6 @@
                         <h3>Research Assistant, Mangul Lab</h3>
                         <p>USC, 2022 - 2023</p>
                         <p class="italic-text">Focused on computational methods to enhance genomics data translation into research.</p>
-                    </li>
-                    
-                    <li class="experience-item">
-                        <h3>Research Assistant, Multisensory Processing Lab</h3>
-                        <p>UCLA, 2022</p>
-                        <p class="italic-text">Examined computational perception with a focus on neural causal inference.</p>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="contact">
-                <h2 class="section-title">Contact</h2>
-                <p>
-                    Email: jiangyuezheng[at]berkeley[dot]edu
-                </p>
-            </section>
-        </div>
-    </div>
-</body>
-</html>                 <p class="italic-text">Focused on computational methods to enhance genomics data translation into research.</p>
                     </li>
                     
                     <li class="experience-item">

@@ -19,12 +19,12 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.8;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
-            font-size: 16px;
+            font-size: 12px;
         }
 
         header {
@@ -38,7 +38,7 @@
             background-size: 200% 200%;
             animation: gradientMove 15s ease infinite;
             color: white;
-            padding: 3rem 0;
+            padding: 2rem 0;
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -51,27 +51,77 @@
 
         .content-wrapper {
             background: white;
-            max-width: 1000px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 2rem 3rem;
+            padding: 1.5rem 2rem;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
         }
 
         .experience-item {
             background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
             border: 1px solid var(--card-border);
             border-left: 4px solid var(--primary-color);
             transition: all 0.3s ease;
-            position: relative;
+        }
+
+        .experience-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--accent-color);
+        }
+
+        .section-title {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 1rem 0 0.75rem;
+        }
+
+        h3 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            color: #4a5568;
+        }
+
+        .italic-text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.8rem;
+            margin: 0.25rem 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
 
         .experience-item a {
             display: inline-block;
-            position: relative;
-            z-index: 2;
-            padding: 0.25rem 0;
             margin-top: 0.5rem;
             text-decoration: none;
             color: var(--link-color);
@@ -81,223 +131,27 @@
             color: var(--accent-color);
         }
 
-        .experience-item::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            background: transparent;
-            pointer-events: none;
-        }
-
-        .experience-item:hover {
-            transform: translateX(5px);
-            border-left-color: var(--accent-color);
-        }
-
-        .about-section {
+        .contact {
+            background: #f8f9fa;
             padding: 1.5rem;
-            background: linear-gradient(to right, rgba(96, 165, 250, 0.1), transparent);
             border-radius: 8px;
-            margin-bottom: 2rem;
+            margin-top: 1rem;
         }
 
-        .section-title {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid var(--card-border);
-            border-left: 4px solid var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        .experience-description {
-            margin-top: 0.5rem;
-        }
-
-        header {
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 1rem 0 0.75rem;
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin: 0.5rem 0;
-        }
-
-        .section-title {
-            margin-top: 1.5rem;
-        }
-
-        .about-section {
-            padding: 1rem;
-            background: linear-gradient(to right, rgba(96, 165, 250, 0.1), transparent);
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-
-        .left-column {
-            grid-column: 1;
-        }
-
-        .right-column {
-            grid-column: 2;
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         @media (max-width: 1024px) {
             .content-wrapper {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                padding: 1.5rem;
             }
 
-            .left-column, .right-column {
+            .full-width {
                 grid-column: 1;
-            }
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 2rem 0 1rem;
-            letter-spacing: -0.3px;
-        }
-
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 1.5rem 0 1rem;
-        }
-
-        .section-title {
-            border-bottom: 3px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-top: var(--section-spacing);
-        }
-
-        p {
-            margin: 1rem 0;
-            line-height: 1.8;
-            color: #4a5568;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--secondary-color);
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
-
-        .italic-text {
-            font-style: italic;
-            color: #666;
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
-        }
-
-        .contact {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        .experience-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--card-border);
-            border-left: 4px solid var(--primary-color);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 95%, var(--accent-color) 95%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .experience-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.1);
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        .experience-item:hover::before {
-            opacity: 0.1;
-        }
-
-        .section-title {
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-            margin-top: var(--section-spacing);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 30px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
             }
         }
 
@@ -311,7 +165,7 @@
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -326,10 +180,9 @@
 
     <div class="container">
         <div class="content-wrapper">
-            <section>
+            <section class="full-width">
                 <h2>About Me</h2>
-                <p>
-                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.
+                <p>I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.</p>
             </section>
 
             <section>
@@ -339,41 +192,28 @@
                     <li class="experience-item">
                         <h3>Research on Coupled Derivative Nonlinear Schrödinger Equation</h3>
                         <p class="italic-text">Advisor: Sung-Jin Oh, UC Berkeley | 2024 - Present</p>
-                        <p>Investigating multi-soliton solutions of the Coupled Derivative Nonlinear Schrödinger Equation (CDNLS) using the Riemann-Hilbert method. Developed foundational expertise in integrable systems, such as the KdV equation, and applied matrix-analytic techniques to reflectionless cases.</p>
+                        <p>Investigating multi-soliton solutions of the CDNLS using the Riemann-Hilbert method. Developed expertise in integrable systems and matrix-analytic techniques.</p>
                         <p class="italic-text">Status: Preprint in preparation</p>
                         <a href="cdnls_equation_notes.pdf" target="_blank">Research Notes →</a>
                     </li>
 
                     <li class="experience-item">
-                        <h3>Reading Course on Lie Groups and Lie Algebras & Representation Theory</h3>
+                        <h3>Reading Course on Lie Groups and Lie Algebras</h3>
                         <p class="italic-text">Advisor: Tony Feng, UC Berkeley | 2024 - Present</p>
-                        <p>Engaged in exploration of Lie groups and Lie algebras with a focus on representation theory, classification of semisimple Lie algebras, and their applications in automorphic forms. Currently working on an honors thesis on the Weyl character formula and the Borel-Weil-Bott Theorem.</p>
+                        <p>Exploring representation theory and classification of semisimple Lie algebras. Working on honors thesis on Weyl character formula.</p>
                         <a href="lie_groups_notes.pdf" target="_blank">Reading Notes →</a>
                     </li>
-                    
+
                     <li class="experience-item">
                         <h3>Reading Course on Algebraic Number Theory</h3>
                         <p class="italic-text">Advised by Emiliano Gomez, UC Berkeley | 2024 - Present</p>
                         <a href="algebraic_number_theory_notes.pdf" target="_blank">Reading Notes →</a>
                     </li>
-            
-                    
-                    <li class="experience-item">
-                        <h3>Reading Course on Measure Theory & Hilbert Spaces</h3>
-                        <p class="italic-text">Advised by Mengxuan Yang, UC Berkeley | 2024 - Present</p>
-                        <a href="real_analysis_notes.pdf" target="_blank">Reading Notes →</a>
-                    </li>
-                    
-                    <li class="experience-item">
-                        <h3>Reading Course on Representation Theory & Characteristic Classes</h3>
-                        <p class="italic-text">Advised by Rui Wang, UC Berkeley | 2023 - Present</p>
-                        <a href="representation_theory_notes.pdf" target="_blank">Reading Notes →</a>
-                    </li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="section-title">Teaching Experience</h2>
+                <h2 class="section-title">Teaching & Other Experience</h2>
                 <ul>
                     <li class="experience-item">
                         <h3>Undergraduate Student Instructor (uGSI)</h3>
@@ -388,35 +228,22 @@
                     </li>
                     
                     <li class="experience-item">
-                        <h3>Upper-division Math Tutor</h3>
-                        <p>SLC Tutoring Center, 2024</p>
-                        <p class="italic-text">Courses: Math104, Math110, Math113, Math185</p>
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <h2 class="section-title">Other Research Experience</h2>
-                <ul>
-                    <li class="experience-item">
                         <h3>Research Assistant, Mangul Lab</h3>
                         <p>USC, 2022 - 2023</p>
-                        <p class="italic-text">Focused on computational methods to enhance genomics data translation into research.</p>
+                        <p class="italic-text">Computational methods for genomics data translation</p>
                     </li>
                     
                     <li class="experience-item">
                         <h3>Research Assistant, Multisensory Processing Lab</h3>
                         <p>UCLA, 2022</p>
-                        <p class="italic-text">Examined computational perception with a focus on neural causal inference.</p>
+                        <p class="italic-text">Computational perception and neural causal inference</p>
                     </li>
                 </ul>
             </section>
 
-            <section class="contact">
+            <section class="full-width contact">
                 <h2 class="section-title">Contact</h2>
-                <p>
-                    Email: jiangyuezheng[at]berkeley[dot]edu
-                </p>
+                <p>Email: jiangyuezheng[at]berkeley[dot]edu</p>
             </section>
         </div>
     </div>

@@ -44,17 +44,16 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         .content-wrapper {
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 3rem;
         }
 
         .experience-item {
@@ -65,6 +64,30 @@
             border: 1px solid var(--card-border);
             border-left: 4px solid var(--primary-color);
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .experience-item a {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            padding: 0.25rem 0;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            color: var(--link-color);
+        }
+
+        .experience-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .experience-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: transparent;
+            pointer-events: none;
         }
 
         .experience-item:hover {
@@ -306,7 +329,7 @@
             <section>
                 <h2>About Me</h2>
                 <p>
-                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.</p>
+                    I'm a senior studying Pure Mathematics at UC Berkeley. My research interests center around algebra and representation theory.
             </section>
 
             <section>
@@ -314,35 +337,36 @@
                 <h3>Reading Courses & Research</h3>
                 <ul>
                     <li class="experience-item">
-                        <h3>Algebraic Number Theory</h3>
-                        <p class="italic-text">Advised by Emiliano Gomez, UC Berkeley, Fall 2024 - Present</p>
-                        <a href="algebraic_number_theory_notes.pdf" target="_blank">Reading Notes →</a>
-                    </li>
-                    
-                    <li class="experience-item">
                         <h3>Research on Coupled Derivative Nonlinear Schrödinger Equation</h3>
                         <p class="italic-text">Advisor: Sung-Jin Oh, UC Berkeley | 2024 - Present</p>
                         <p>Investigating multi-soliton solutions of the Coupled Derivative Nonlinear Schrödinger Equation (CDNLS) using the Riemann-Hilbert method. Developed foundational expertise in integrable systems, such as the KdV equation, and applied matrix-analytic techniques to reflectionless cases.</p>
                         <p class="italic-text">Status: Preprint in preparation</p>
                         <a href="cdnls_equation_notes.pdf" target="_blank">Research Notes →</a>
                     </li>
-                    
-                    <li class="experience-item">
-                        <h3>Real Analysis: Measure Theory, Integration, & Hilbert Spaces</h3>
-                        <p class="italic-text">Advised by Mengxuan Yang, UC Berkeley, 2024 - Present</p>
-                        <a href="real_analysis_notes.pdf" target="_blank">Reading Notes →</a>
-                    </li>
-                    
+
                     <li class="experience-item">
                         <h3>Reading Course on Lie Groups and Lie Algebras & Representation Theory</h3>
                         <p class="italic-text">Advisor: Tony Feng, UC Berkeley | 2024 - Present</p>
-                        <p>Engaged in advanced exploration of Lie groups and Lie algebras with a focus on representation theory, classification of semisimple Lie algebras, and their applications in automorphic forms. Currently working on an honors thesis on the Weyl character formula and the Borel-Weil-Bott Theorem.</p>
+                        <p>Engaged in exploration of Lie groups and Lie algebras with a focus on representation theory, classification of semisimple Lie algebras, and their applications in automorphic forms. Currently working on an honors thesis on the Weyl character formula and the Borel-Weil-Bott Theorem.</p>
                         <a href="lie_groups_notes.pdf" target="_blank">Reading Notes →</a>
                     </li>
                     
                     <li class="experience-item">
-                        <h3>Representation Theory & Characteristic Classes</h3>
-                        <p class="italic-text">Advised by Rui Wang, UC Berkeley, 2023 - Present</p>
+                        <h3>Reading Course on Algebraic Number Theory</h3>
+                        <p class="italic-text">Advised by Emiliano Gomez, UC Berkeley | 2024 - Present</p>
+                        <a href="algebraic_number_theory_notes.pdf" target="_blank">Reading Notes →</a>
+                    </li>
+            
+                    
+                    <li class="experience-item">
+                        <h3>Reading Course on Measure Theory & Hilbert Spaces</h3>
+                        <p class="italic-text">Advised by Mengxuan Yang, UC Berkeley | 2024 - Present</p>
+                        <a href="real_analysis_notes.pdf" target="_blank">Reading Notes →</a>
+                    </li>
+                    
+                    <li class="experience-item">
+                        <h3>Reading Course on Representation Theory & Characteristic Classes</h3>
+                        <p class="italic-text">Advised by Rui Wang, UC Berkeley | 2023 - Present</p>
                         <a href="representation_theory_notes.pdf" target="_blank">Reading Notes →</a>
                     </li>
                 </ul>
